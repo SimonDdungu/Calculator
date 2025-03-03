@@ -22,6 +22,10 @@ const Main = () => {
                   setInput("")
                   return
               }
+              if(input.includes("/0")){
+                  setInput("Math Error")
+                  return
+              }
               setInput(eval(input).toString())
           }catch{
               setInput("Math Error")
